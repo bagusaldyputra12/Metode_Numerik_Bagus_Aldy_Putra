@@ -1,0 +1,4 @@
+Library yang digunakan 
+numpy
+scipy
+matplotlib
