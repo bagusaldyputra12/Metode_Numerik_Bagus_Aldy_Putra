@@ -193,36 +193,33 @@ Overrelaxation sering digunakan untuk mempercepat konvergensi pada sistem yang s
 
 
 # Soal 11.14
-## Metode:
-- Analisis Konvergensi
-- Gauss-Seidel Method
 
-## Penjelasan:
+## Metode
 
-Metode Gauss-Seidel merupakan salah satu metode iteratif yang digunakan untuk menyelesaikan sistem persamaan linear. Berbeda dengan metode langsung seperti Eliminasi Gauss, metode ini memperoleh solusi melalui proses pendekatan bertahap (iterasi) hingga mencapai tingkat kesalahan yang dapat diterima.
+* Analisis Konvergensi
+* Metode Gauss-Seidel
 
-Pada soal ini dilakukan analisis mengenai kondisi konvergensi metode Gauss-Seidel. Konvergensi berarti bahwa nilai hasil iterasi akan semakin mendekati solusi sebenarnya seiring bertambahnya jumlah iterasi.
+## Penjelasan
 
-Salah satu faktor yang memengaruhi konvergensi adalah bentuk matriks koefisien. Metode Gauss-Seidel umumnya akan konvergen apabila matriks memenuhi kondisi **diagonal dominance**, yaitu nilai absolut elemen diagonal pada setiap baris lebih besar daripada jumlah nilai absolut elemen lain pada baris yang sama.
+Metode Gauss-Seidel merupakan salah satu metode numerik iteratif yang digunakan untuk menyelesaikan sistem persamaan linear. Berbeda dengan metode langsung seperti Eliminasi Gauss atau LU Decomposition yang menghasilkan solusi dalam sejumlah langkah tertentu, metode Gauss-Seidel memperoleh solusi melalui proses iterasi yang dilakukan berulang kali hingga mencapai tingkat galat (error) yang cukup kecil.
 
-Selain itu, perilaku grafik fungsi iterasi juga dapat digunakan untuk menganalisis konvergensi. Jika kemiringan (slope) fungsi iterasi berada pada rentang:
+Pada metode ini, nilai variabel yang baru dihitung pada suatu iterasi langsung digunakan untuk menghitung variabel berikutnya dalam iterasi yang sama. Pendekatan tersebut menyebabkan metode Gauss-Seidel umumnya memiliki kecepatan konvergensi yang lebih baik dibandingkan metode Jacobi.
 
-| Kondisi Slope | Perilaku Iterasi |
-|--------------|------------------|
-| |g'(x)| < 1 | Konvergen |
-| |g'(x)| = 1 | Konvergensi sangat lambat atau osilasi |
-| |g'(x)| > 1 | Divergen |
+Konvergensi merupakan kondisi ketika hasil iterasi semakin mendekati solusi sebenarnya seiring bertambahnya jumlah iterasi. Sebaliknya, jika hasil iterasi semakin menjauh dari solusi atau berosilasi tanpa mendekati suatu nilai tertentu, maka metode dikatakan tidak konvergen atau mengalami divergensi.
 
-Apabila nilai slope mendekati ±1, proses iterasi dapat mengalami osilasi, yaitu nilai solusi bergerak bolak-balik tanpa segera mendekati solusi sebenarnya. Dalam beberapa kasus, osilasi ini menyebabkan metode gagal mencapai konvergensi.
+Salah satu faktor utama yang menentukan keberhasilan konvergensi adalah karakteristik matriks koefisien. Metode Gauss-Seidel cenderung konvergen apabila matriks memenuhi syarat diagonal dominance, yaitu ketika nilai absolut elemen diagonal pada setiap baris lebih besar daripada jumlah nilai absolut elemen-elemen lainnya pada baris yang sama.
 
-## Output:
+Selain itu, konvergensi juga dapat dianalisis melalui fungsi iterasi yang digunakan. Jika nilai turunan atau slope fungsi iterasi memiliki nilai absolut kurang dari satu, maka iterasi biasanya akan konvergen menuju solusi. Jika nilai absolut slope sama dengan satu, proses iterasi dapat mengalami osilasi atau konvergensi yang sangat lambat. Sedangkan apabila nilai absolut slope lebih besar dari satu, iterasi umumnya akan divergen dan tidak menghasilkan solusi yang stabil.
 
-Program menampilkan penjelasan mengenai hubungan antara nilai slope dan perilaku konvergensi metode Gauss-Seidel.
+Pada kasus tertentu, nilai slope yang mendekati satu dapat menyebabkan hasil iterasi bergerak bolak-balik di sekitar solusi tanpa segera mencapainya. Fenomena ini dikenal sebagai osilasi iteratif dan dapat memperlambat proses konvergensi secara signifikan.
 
-## Kesimpulan:
+## Output
 
-Keberhasilan metode Gauss-Seidel sangat dipengaruhi oleh sifat matriks dan karakteristik fungsi iterasi. Jika nilai slope berada di luar rentang yang mendukung konvergensi atau matriks tidak memenuhi syarat diagonal dominance, maka solusi dapat berosilasi atau bahkan divergen. Oleh karena itu, analisis konvergensi penting dilakukan sebelum menerapkan metode iteratif pada suatu sistem persamaan.
+Program menampilkan penjelasan mengenai faktor-faktor yang memengaruhi konvergensi metode Gauss-Seidel, termasuk pengaruh diagonal dominance dan karakteristik slope fungsi iterasi.
 
+## Kesimpulan
+
+Keberhasilan metode Gauss-Seidel sangat bergantung pada sifat matriks koefisien dan fungsi iterasi yang digunakan. Matriks yang memenuhi diagonal dominance memiliki peluang lebih besar untuk menghasilkan konvergensi yang stabil. Sebaliknya, apabila syarat tersebut tidak terpenuhi atau nilai slope berada di luar rentang yang mendukung konvergensi, proses iterasi dapat mengalami osilasi maupun divergensi. Oleh karena itu, analisis konvergensi merupakan langkah penting sebelum menerapkan metode Gauss-Seidel pada suatu sistem persamaan linear.
 
 
 # Soal 11.15
@@ -266,3 +263,202 @@ Program memberikan penjelasan mengenai penyebab divergensi pada metode iteratif 
 ## Kesimpulan:
 
 Diagonal dominance merupakan salah satu syarat penting untuk menjamin konvergensi metode iteratif. Jika syarat tersebut tidak terpenuhi, maka proses iterasi berpotensi mengalami divergensi sehingga solusi yang diperoleh menjadi tidak valid. Oleh karena itu, sebelum menggunakan metode Jacobi atau Gauss-Seidel, perlu dilakukan analisis terhadap struktur matriks koefisien yang digunakan.
+
+# Soal 11.16
+## Metode:
+- Matrix Inverse
+- Condition Number
+
+## Penjelasan:
+Program menghitung invers matriks dan condition number untuk mengevaluasi sensitivitas solusi terhadap perubahan data masukan.
+
+## Output:
+- Matriks invers
+- Nilai condition number
+
+## Kesimpulan:
+Semakin besar condition number, semakin sensitif sistem terhadap kesalahan pembulatan.
+
+---
+
+# Soal 11.17
+## Metode:
+- Penyelesaian Sistem Persamaan Linear
+
+## Penjelasan:
+Program menyelesaikan sistem persamaan linear menggunakan metode eliminasi yang tersedia pada NumPy.
+
+## Output:
+Nilai variabel x1, x2, dan x3.
+
+## Kesimpulan:
+Metode langsung memberikan solusi dengan cepat dan akurat untuk sistem berukuran kecil.
+
+---
+
+# Soal 11.18
+## Metode:
+- Penyelesaian Sistem Linear
+
+## Penjelasan:
+Program menyelesaikan sistem persamaan linear tiga variabel menggunakan fungsi numpy.linalg.solve().
+
+## Output:
+Vektor solusi sistem.
+
+## Kesimpulan:
+Solusi diperoleh dengan memanfaatkan operasi matriks secara efisien.
+
+---
+
+# Soal 11.19
+## Metode:
+- Hilbert Matrix
+- Condition Number
+
+## Penjelasan:
+Program membentuk matriks Hilbert dan menghitung condition number untuk melihat tingkat ill-conditioning matriks.
+
+## Output:
+- Matriks Hilbert
+- Nilai condition number
+
+## Kesimpulan:
+Matriks Hilbert terkenal sebagai matriks yang sangat sensitif terhadap kesalahan numerik.
+
+---
+
+# Soal 11.20
+## Metode:
+- Vandermonde Matrix
+
+## Penjelasan:
+Program membentuk matriks Vandermonde berdasarkan sekumpulan titik data.
+
+## Output:
+Matriks Vandermonde.
+
+## Kesimpulan:
+Matriks Vandermonde sering digunakan pada interpolasi polinomial.
+
+---
+
+# Soal 11.21
+## Metode:
+- Augmented Matrix
+
+## Penjelasan:
+Program menggabungkan matriks koefisien dengan vektor konstanta menjadi matriks augmented.
+
+## Output:
+Matriks augmented [A|B].
+
+## Kesimpulan:
+Matriks augmented digunakan sebagai dasar metode eliminasi Gauss.
+
+---
+
+# Soal 11.22
+## Metode:
+- Matrix Inverse
+
+## Penjelasan:
+Program menghitung invers matriks 2×2 menggunakan NumPy.
+
+## Output:
+Matriks invers.
+
+## Kesimpulan:
+Invers matriks dapat digunakan untuk menyelesaikan sistem linear berbentuk AX = B.
+
+---
+
+# Soal 11.23
+## Metode:
+- Analisis Thomas Algorithm
+- Analisis Gauss-Seidel
+
+## Penjelasan:
+Program membandingkan efisiensi Thomas Algorithm dan Gauss-Seidel untuk sistem tridiagonal.
+
+## Output:
+Penjelasan perbandingan metode.
+
+## Kesimpulan:
+Thomas Algorithm lebih efisien karena memiliki kompleksitas O(n).
+
+---
+
+# Soal 11.24
+## Metode:
+- Thomas Algorithm
+
+## Penjelasan:
+Program mengimplementasikan Thomas Algorithm secara manual untuk menyelesaikan sistem tridiagonal.
+
+## Output:
+Vektor solusi sistem.
+
+## Kesimpulan:
+Thomas Algorithm sangat efektif untuk matriks tridiagonal.
+
+---
+
+# Soal 11.25
+## Metode:
+- Cholesky Decomposition
+
+## Penjelasan:
+Program menghitung matriks segitiga bawah L dari dekomposisi Cholesky.
+
+## Output:
+Matriks L.
+
+## Kesimpulan:
+Dekomposisi Cholesky lebih efisien dibanding LU untuk matriks simetris positif definit.
+
+---
+
+# Soal 11.26
+## Metode:
+- Gauss-Seidel Iteration
+
+## Penjelasan:
+Program menyelesaikan sistem persamaan linear menggunakan metode iteratif Gauss-Seidel.
+
+## Output:
+Nilai solusi yang diperoleh setelah iterasi konvergen.
+
+## Kesimpulan:
+Metode Gauss-Seidel memberikan solusi yang baik untuk sistem yang memenuhi diagonal dominance.
+
+---
+
+# Soal 11.27
+## Metode:
+- Persamaan Diferensial Numerik
+- Visualisasi Grafik
+
+## Penjelasan:
+Program mensimulasikan solusi fungsi eksponensial dan menampilkan grafik hasilnya menggunakan Matplotlib.
+
+## Output:
+Grafik hubungan x dan y.
+
+## Kesimpulan:
+Visualisasi membantu memahami perilaku solusi numerik terhadap perubahan variabel.
+
+---
+
+# Soal 11.28
+## Metode:
+- Sistem Pentadiagonal
+
+## Penjelasan:
+Program menyelesaikan sistem persamaan linear dengan matriks pentadiagonal menggunakan metode penyelesaian langsung.
+
+## Output:
+Vektor solusi sistem.
+
+## Kesimpulan:
+Sistem pentadiagonal merupakan perluasan dari sistem tridiagonal dan sering muncul pada pemodelan numerik multidimensi.
