@@ -12,7 +12,6 @@ Nilai x1, x2, dan x3 dari sistem persamaan.
 ## Kesimpulan:
 Sistem persamaan tridiagonal dapat diselesaikan secara efisien menggunakan metode numerik dan operasi matriks.
 
----
 
 # Soal 11.2
 ## Metode:
@@ -28,7 +27,7 @@ Matriks invers hasil perhitungan.
 ## Kesimpulan:
 LU Decomposition mempermudah proses pencarian invers matriks dan penyelesaian sistem linear.
 
----
+
 
 # Soal 11.3
 ## Metode:
@@ -43,7 +42,7 @@ Nilai temperatur T1, T2, T3, dan T4.
 ## Kesimpulan:
 Thomas Algorithm sangat efisien untuk menyelesaikan sistem persamaan tridiagonal.
 
----
+
 
 # Soal 11.4
 ## Metode:
@@ -59,7 +58,6 @@ Program memverifikasi hasil dekomposisi Cholesky dengan mengalikan matriks L dan
 ## Kesimpulan:
 Jika hasil perkalian L × LT sama dengan matriks awal, maka dekomposisi Cholesky valid.
 
----
 
 # Soal 11.5
 ## Metode:
@@ -74,7 +72,6 @@ Nilai solusi sistem persamaan.
 ## Kesimpulan:
 Cholesky Decomposition memberikan solusi yang efisien untuk matriks simetris positif definit.
 
----
 
 # Soal 11.6
 ## Metode:
@@ -89,7 +86,7 @@ Matriks L.
 ## Kesimpulan:
 Dekomposisi Cholesky dapat digunakan untuk menyederhanakan penyelesaian sistem persamaan linear.
 
----
+
 
 # Soal 11.7
 ## Metode:
@@ -104,7 +101,7 @@ Matriks hasil dekomposisi Cholesky.
 ## Kesimpulan:
 Untuk matriks diagonal positif, hasil Cholesky berupa akar kuadrat dari elemen diagonal.
 
----
+
 
 # Soal 11.8
 ## Metode:
@@ -135,7 +132,7 @@ Nilai konsentrasi akhir masing-masing variabel.
 ## Kesimpulan:
 Metode Gauss-Seidel efektif untuk menyelesaikan sistem linear yang memenuhi syarat konvergensi.
 
----
+
 
 # Soal 11.10
 ## Metode:
@@ -165,7 +162,7 @@ Nilai x1, x2, dan x3.
 ## Kesimpulan:
 Metode Gauss-Seidel umumnya lebih cepat konvergen dibanding metode Jacobi.
 
----
+
 
 # Soal 11.12
 ## Metode:
@@ -180,7 +177,6 @@ Nilai solusi iteratif.
 ## Kesimpulan:
 Relaksasi dapat membantu mempercepat atau menstabilkan proses iterasi.
 
----
 
 # Soal 11.13
 ## Metode:
@@ -195,7 +191,6 @@ Nilai solusi akhir.
 ## Kesimpulan:
 Overrelaxation sering digunakan untuk mempercepat konvergensi pada sistem yang sudah konvergen.
 
----
 
 # Soal 11.14
 ## Metode:
@@ -228,7 +223,7 @@ Program menampilkan penjelasan mengenai hubungan antara nilai slope dan perilaku
 
 Keberhasilan metode Gauss-Seidel sangat dipengaruhi oleh sifat matriks dan karakteristik fungsi iterasi. Jika nilai slope berada di luar rentang yang mendukung konvergensi atau matriks tidak memenuhi syarat diagonal dominance, maka solusi dapat berosilasi atau bahkan divergen. Oleh karena itu, analisis konvergensi penting dilakukan sebelum menerapkan metode iteratif pada suatu sistem persamaan.
 
----
+
 
 # Soal 11.15
 ## Metode:
