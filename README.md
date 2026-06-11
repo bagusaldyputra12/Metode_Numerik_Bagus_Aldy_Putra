@@ -1,8 +1,8 @@
-NAMA : BAGUS ALDY PUTRA
-NIM : F5512510009
-Kelas : Teknik Informatika A
+## NAMA : BAGUS ALDY PUTRA
+## NIM : F5512510009
+## Kelas : Teknik Informatika A
 
-Repository ini berisi penyelesaian Soal 11.1–11.28 menggunakan Python berdasarkan Bab 11 (Special Matrices and Gauss-Seidel) pada buku Numerical Methods for Engineers.
+## Repository ini berisi penyelesaian Soal 11.1–11.28 menggunakan Python berdasarkan Bab 11 (Special Matrices and Gauss-Seidel) pada buku Numerical Methods for Engineers.
 
 
 # Soal 11.1
